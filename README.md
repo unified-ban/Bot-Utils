@@ -10,7 +10,7 @@ This path contains 2 packages:
 Tools such as the logger or daemon are present as files, while
 decorators and helpers have their own subfolder.
 
-**Examples**
+## Examples
 A set of functions for using the shell must be placed in the
 Utils folder.
 
