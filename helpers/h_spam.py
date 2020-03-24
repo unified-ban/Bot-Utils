@@ -7,6 +7,7 @@
 import time, re, datetime, os, requests, imagehash
 from urllib import request
 from urlextract import URLExtract
+from telegram import ChatPermissions
 from telegram.error import TelegramError
 from Utils import logger, sql
 from Utils.helpers import h_message
@@ -28,9 +29,17 @@ def perform_group_spam_action(update, context, actions):
 		# limit
 		if actions[0] == 1:
 			bot.restrict_chat_member(
-				message.chat_id, 
+				message.chat_id,
 				user.id,
-				datetime.datetime.now() + datetime.timedelta(days=1)
+				ChatPermissions(
+					can_send_messages=False, 
+					can_send_media_messages=False, 
+					can_send_polls=False,
+					can_send_other_messages=False, 
+					can_add_web_page_previews=False,
+					can_invite_users=False
+				),
+				until_date=datetime.datetime.now() + datetime.timedelta(days=1)
 			)
 		# ban
 		if actions[1] == 1:
@@ -138,7 +147,7 @@ def logic_containsWords(update, params):
 		
 		return False
 	except Exception as e:
-		# logger.exception(e)
+		#logger.exception(e)
 		pass
 
 '''
@@ -162,5 +171,5 @@ def logic_imageComparison(update, context, sources):
 		
 		return False
 	except Exception as e:
-		logger.exception(e)
+		#logger.exception(e)
 		pass
