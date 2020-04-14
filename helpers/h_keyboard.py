@@ -6,7 +6,6 @@
 
 from Utils import logger
 from telegram import InlineKeyboardMarkup
-import time
 
 '''
 Build new telegram keyboard menu.

@@ -27,7 +27,7 @@ def sync(update, context):
 			try:
 				bot.kick_chat_member(chat_id, user[0])
 			except Exception as e:
-				pass
+				logger.exception(e)
 		return counter
 	except Exception as e:
 		logger.exception(e)

@@ -11,7 +11,7 @@ from signal import SIGTERM
 
 class Daemon(object):
 	startmsg = "Started with pid %s"
-	
+
 	def __init__(self, pidfile, stdin='/dev/null', stdout='/dev/null', stderr='/dev/null'):
 		self.stdin = stdin
 		self.stdout = stdout
@@ -53,7 +53,7 @@ class Daemon(object):
 		try:
 			os.remove(self.pidfile)
 		except OSError:
-			pass
+			print("OSError")
 
 	def start(self):
 		"""
@@ -120,4 +120,4 @@ class Daemon(object):
 		self.start()
 
 	def run(self):
-		pass
+		print("run")

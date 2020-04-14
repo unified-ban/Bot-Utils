@@ -25,5 +25,5 @@ def only_roman_chars(unistr):
 		return all(is_latin(uchr)
 			for uchr in unistr
 			if uchr.isalpha())
-	except:
-		pass
+	except Exception as e:
+		logger.exception(e)

@@ -18,7 +18,7 @@ class MQBot(telegram.bot.Bot):
 		try:
 			self._msg_queue.stop()
 		except:
-			pass
+			print("False")
 		super(MQBot, self).__del__()
 	
 	@mq.queuedmessage

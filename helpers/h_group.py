@@ -13,10 +13,8 @@ Get group language from config
 '''
 def get_language(update):
 	try:
-		#logger.log.info("lang---"+inspect.stack()[1][3])
 		db = sql.Database(update)
 		group = db.get_groups()
 		return getattr(Languages, group[18])
-	except Exception as e:
+	except:
 		return Languages.en_US
-		logger.exception(e)

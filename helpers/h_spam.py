@@ -62,8 +62,7 @@ def set_correct_user(update):
 			update.message.from_user.last_name = str(new.last_name)
 		return update
 	except Exception as e:
-		# logger.exception(e)
-		pass
+		logger.exception(e)
 
 '''
 Get Telegram domains from text
@@ -147,8 +146,7 @@ def logic_containsWords(update, params):
 		
 		return False
 	except Exception as e:
-		#logger.exception(e)
-		pass
+		logger.exception(e)
 
 '''
 Compare image hash with source hash
@@ -171,5 +169,4 @@ def logic_imageComparison(update, context, sources):
 		
 		return False
 	except Exception as e:
-		#logger.exception(e)
-		pass
+		logger.exception(e)
