@@ -1,4 +1,7 @@
 # Bot-Utils
+
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/652b5e987c0a4fc8b7e83f64e766aceb)](https://app.codacy.com/gh/unified-ban/Bot-Utils?utm_source=github.com&utm_medium=referral&utm_content=unified-ban/Bot-Utils&utm_campaign=Badge_Grade_Dashboard)
+
 Bot utilities, helpers and decorators
 
 Here are all the functions of common use and tools in general.
