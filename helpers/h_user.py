@@ -5,8 +5,6 @@
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
 import re
-import Params
-import base64
 from Utils import logger
 import unicodedata
 

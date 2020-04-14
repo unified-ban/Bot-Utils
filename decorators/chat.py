@@ -9,7 +9,6 @@ Binds a function to private chats only
 '''
 def only_private(fn):
 	def wrapper(*args,**kwargs):
-		bot = args[1].bot
 		message = args[0].message
 		if message.chat.type == 'private':
 			return fn(*args,**kwargs)
@@ -22,7 +21,6 @@ Binds a function to groups only
 '''
 def only_groups(fn):
 	def wrapper(*args,**kwargs):
-		bot = args[1].bot
 		message = args[0].message
 		if message.chat.type != 'private':
 			return fn(*args,**kwargs)

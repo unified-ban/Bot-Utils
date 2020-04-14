@@ -4,12 +4,11 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-import time, re, datetime, os, requests, imagehash
+import time, re, datetime, requests, imagehash
 from urllib import request
 from urlextract import URLExtract
 from telegram import ChatPermissions
-from telegram.error import TelegramError
-from Utils import logger, sql
+from Utils import logger
 from Utils.helpers import h_message
 from PIL import Image
 from io import BytesIO

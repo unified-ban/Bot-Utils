@@ -55,6 +55,8 @@ def extract_function_name():
 
 def exception(e):
 	exc_type, exc_obj, exc_tb = sys.exc_info()
+	print(exc_type)
+	print(exc_obj)
 	file_name = os.path.split(exc_tb.tb_frame.f_code.co_filename)[1]
 	log.error(
 	"File: {file} Line: {line}\n\

@@ -5,8 +5,7 @@
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
 import Languages
-from Utils import logger, sql
-import inspect
+from Utils import sql
 
 '''
 Get group language from config

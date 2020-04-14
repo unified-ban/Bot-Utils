@@ -5,7 +5,7 @@
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
 from Utils import logger
-import time, unicodedata
+import unicodedata
 
 '''
 Check for non-west characters in text

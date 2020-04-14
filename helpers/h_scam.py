@@ -5,7 +5,7 @@
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
 import Params
-from Utils import logger, file
+from Utils import logger
 
 '''
 Check if link is phishing
