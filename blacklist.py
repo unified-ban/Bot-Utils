@@ -6,7 +6,6 @@
 
 import time
 from . import sql, logger
-from telegram.error import TelegramError
 
 '''
 Synchronize the chat with the blacklist
